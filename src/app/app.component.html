@@ -1,1 +1,9 @@
-<app-header></app-header>
+<app-header/>
+<app-user-input (calculate)="handleCalculate($event)" />
+@if(investmentsResults && investmentsResults.length > 0){
+    <app-investment-results [investmentsResults]="investmentsResults"  />
+}@else{
+    <div style="text-align: center;">
+        <p>No results</p>
+    </div>
+}
